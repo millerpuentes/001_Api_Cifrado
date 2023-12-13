@@ -34,3 +34,4 @@ def test_encriptando_texto(mensaje:str,llave:str):
     salida = encriptando_texto(mensaje,llave)
     mensaje_desencriptado = entorno_cifrado.decrypt(salida)
     assert mensaje_desencriptado == mensaje
+    
