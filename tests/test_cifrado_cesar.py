@@ -1,7 +1,13 @@
 """
 Aqui se prueba la función de cifrado cesar
 """
+import os
+import sys
 import pytest
+PROJECT_ROOT = os.path.abspath(os.path.join(
+               os.path.dirname(__file__),
+               os.pardir))
+sys.path.append(PROJECT_ROOT)
 from app.funciones.cifrado_cesar import cifrado_cesar
 
 @pytest.mark.parametrize(

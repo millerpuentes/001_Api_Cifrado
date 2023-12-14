@@ -1,7 +1,15 @@
-"""Este modulo comprueba que se haga un buen hashing de los textos"""
+"""
+Este modulo comprueba que se haga un buen hashing de los textos
+"""
+import os
+import sys
 import pytest
 from app.funciones.hashing import text_hash
 
+PROJECT_ROOT = os.path.abspath(os.path.join(
+               os.path.dirname(__file__),
+               os.pardir))
+sys.path.append(PROJECT_ROOT)
 
 @pytest.mark.parametrize(
     "mensaje,hash_esperado",
@@ -31,4 +39,3 @@ def test_text_hash(mensaje:str,hash_esperado:str):
     esperado_sha256 = hash_esperado
     salida = text_hash(mensaje=mensaje)
     assert salida == esperado_sha256
-    

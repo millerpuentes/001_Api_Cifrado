@@ -1,8 +1,15 @@
 """
 Aqui se prueba la función de encriptado simétrico
 """
+import os
+import sys
 import pytest
 from cryptography.fernet import Fernet
+
+PROJECT_ROOT = os.path.abspath(os.path.join(
+               os.path.dirname(__file__),
+               os.pardir))
+sys.path.append(PROJECT_ROOT)
 from app.funciones.encriptado import encriptando_texto
 
 @pytest.mark.parametrize(
