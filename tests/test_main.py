@@ -9,11 +9,10 @@ from app.main import app
 
 client = TestClient(app)
 
-
 def test_url_cifrado_cesar():
     """
     Prueba unitaria para verificar api con cifrado cesar
     """
     respuesta = client.get("/cifrado-cesar?texto=hello&clave=3")
     assert respuesta.status_code == 200
-    assert respuesta.json() == {"mensaje_cifrado": "KHÑÑR"}
+    assert respuesta.json() == {"mensaje_cifrado":"KHÑÑR"}
