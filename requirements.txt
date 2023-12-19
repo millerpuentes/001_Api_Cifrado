@@ -3,3 +3,6 @@ pytest
 pytest-cov
 cryptography
 pycryptodome
+fastapi
+uvicorn
+httpx

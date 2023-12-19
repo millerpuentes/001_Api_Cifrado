@@ -4,7 +4,7 @@ Este modulo hace un cifrado cesar
 
 ALFABETO = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
 
-def cifrado_cesar(mensaje, clave):
+def cifrado_cesar(mensaje:str, clave:int)->str:
     """Esta funcion genera un cifrado cesar a partir de un mensaje
 
     Args:
